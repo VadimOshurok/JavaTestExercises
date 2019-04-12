@@ -4,15 +4,17 @@ public class Calculator {
 	static Scanner scanner = new Scanner(System.in);
 	
 	public static void main(String[] newNum) {
-		int i=1;
-		int time=2;
-        while (i<=time) {
-            double num1 = getInt();
-            double num2 = getInt();
-            char operation = getOperation();
-            double result = calc(num1,num2,operation);
-            System.out.println("Результат операции: "+result);
-		}
+		while(true) {
+			System.out.println("Хотите продолжить 1.Yes/2.No"); 
+			int str = scanner.nextInt();
+			if(str>=2) {
+				break;}
+			double num1 = getInt();
+			double num2 = getInt();
+			char operation = getOperation();
+			double result = calc(num1,num2,operation);
+			System.out.println("Результат операции: "+result); 
+		}	 
 	}
 	public static double getInt() {
 		System.out.println("Введите число: ");
