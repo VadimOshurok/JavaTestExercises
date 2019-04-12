@@ -4,18 +4,20 @@ public class Calculator {
 	static Scanner scanner = new Scanner(System.in);
 	
 	public static void main(String[] newNum) {
-        System.out.println("Включить калькулятор? 1.Yes/2.No");
-		while(true) {
-			int str = scanner.nextInt();
-			if(str>=2) {
-				break;}
+        boolean continueCalculations=true; 
+		do {
 			double num1 = getInt();
 			double num2 = getInt();
 			char operation = getOperation();
 			double result = calc(num1,num2,operation);
 			System.out.println("Результат операции: "+result); 
             System.out.println("Хотите продолжить 1.Yes/2.No"); 
-		}	 
+            int input = scanner.nextInt();
+			if(input!=1) {
+				continueCalculations=false;
+            }
+		}
+		while(continueCalculations);	 
 	}
 	public static double getInt() {
 		System.out.println("Введите число: ");
