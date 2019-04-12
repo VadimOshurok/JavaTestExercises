@@ -1,2 +1,2 @@
 # JavaTestExercises
-Calculator v1.2
+Calculator v1
