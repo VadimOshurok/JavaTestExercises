@@ -11,7 +11,7 @@ public class Calculator {
 			char operation = getOperation();
 			double result = calc(num1,num2,operation);
 			System.out.println("Результат операции: "+result); 
-            System.out.println("Хотите продолжить 1.Yes/2.No"); 
+            System.out.println("Хотите продолжить  1.Yes/2.No"); 
             int input = scanner.nextInt();
 			if(input!=1) {
 				continueCalculations=false;
