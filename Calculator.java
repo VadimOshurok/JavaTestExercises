@@ -4,8 +4,8 @@ public class Calculator {
 	static Scanner scanner = new Scanner(System.in);
 	
 	public static void main(String[] newNum) {
+        System.out.println("Включить калькулятор? 1.Yes/2.No");
 		while(true) {
-			System.out.println("Хотите продолжить 1.Yes/2.No"); 
 			int str = scanner.nextInt();
 			if(str>=2) {
 				break;}
@@ -14,6 +14,7 @@ public class Calculator {
 			char operation = getOperation();
 			double result = calc(num1,num2,operation);
 			System.out.println("Результат операции: "+result); 
+            System.out.println("Хотите продолжить 1.Yes/2.No"); 
 		}	 
 	}
 	public static double getInt() {
