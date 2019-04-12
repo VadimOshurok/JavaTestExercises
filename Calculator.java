@@ -4,7 +4,7 @@ public class Calculator {
 	static Scanner scanner = new Scanner(System.in);
 	
 	public static void main(String[] newNum) {
-        System.out.println("Включить калькулятор? 1.Yes/2.No");
+        	System.out.println("Включить калькулятор? 1.Yes/2.No");
 		while(true) {
 			int str = scanner.nextInt();
 			if(str>=2) {
