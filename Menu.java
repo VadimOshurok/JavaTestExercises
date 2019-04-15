@@ -6,47 +6,47 @@ public class Menu {
 	public static void main(String[] args) {
 		boolean continueCalculationsMain=true; 
 		do {
-		System.out.println("1-калькулятор 2-игра");
-		int nummer = MenuOperation();
-		if (nummer == 1) {
-			boolean continueCalculations=true; 
-			do {
-				double num1 = getInt();
-				double num2 = getInt();
-				char operation = getOperation();
-				double result = calc(num1,num2,operation);
-				System.out.println("Результат операции: "+result); 
-	            System.out.println("Хотите продолжить 1.Yes/2.No"); 
-	            int input = scanner.nextInt();
-				if(input!=1) {
-					continueCalculations=false;
-	            }
+			System.out.println("1-калькулятор 2-игра");
+			int nummer = MenuOperation();
+			if (nummer == 1) {
+				boolean continueCalculations=true; 
+				do { 
+					double num1 = getInt();
+					double num2 = getInt();
+					char operation = getOperation();
+					double result = calc(num1,num2,operation);
+					System.out.println("Результат операции: "+result); 
+					System.out.println("Хотите продолжить 1.Yes/2.No"); 
+					int input = scanner.nextInt();
+					if(input!=1) {
+						continueCalculations=false;
+					}
+				}
+				while(continueCalculations);
 			}
-			while(continueCalculations);
-		}
-		if (nummer == 2) { 
-			boolean continueCalculations=true; 
-			do {
-				System.out.println("Вам надо отгдадать число от 1 до 10");
-				int num = getInt2();
-				int rand = randomGenerator();
-				body(num, rand); 
-	            System.out.println("Хотите попробывать еще раз? 1.Yes/2.No"); 
-	            int input = scanner.nextInt();
-				if(input!=1) {
-					continueCalculations=false;
-	            }
+			if (nummer == 2) { 
+				boolean continueCalculations=true; 
+				do {
+					System.out.println("Вам надо отгдадать число от 1 до 10");
+					int num = getInt2();
+					int rand = randomGenerator();
+					body(num, rand); 
+					System.out.println("Хотите попробывать еще раз? 1.Yes/2.No"); 
+					int input = scanner.nextInt();
+					if(input!=1) {
+						continueCalculations=false;
+					}
+				}
+				while(continueCalculations);
 			}
-			while(continueCalculations);
-		}
-		System.out.println("Вернуться в меню? 1.Yes/2.No"); 
-        int input = scanner.nextInt();
-		if(input!=1) {
+			System.out.println("Вернуться в меню? 1.Yes/2.No"); 
+			int input = scanner.nextInt();
+			if(input!=1) {
 			continueCalculationsMain=false;
-        }
-	}
-	while(continueCalculationsMain);	
-	}
+			}
+		}
+		while(continueCalculationsMain);	
+		}
 	public static int MenuOperation() {
 		int nummer = 0;
 		if (scanner.hasNextInt()) {
@@ -55,13 +55,12 @@ public class Menu {
 		return nummer;
 	}
 
-		 
+	
 	public static double getInt() {
 		System.out.println("Введите число: ");
 		double num = 0.0;
 		if (scanner.hasNextInt()) {
-			num = scanner.nextInt();
-		}
+			num = scanner.nextInt();			}
 		return num;
 	}
 	public static char getOperation() {
@@ -90,6 +89,7 @@ public class Menu {
 		}
 		return result;
 	}
+
 	public static int randomGenerator() {
 		int rand = 1 + (int) (Math.random()*10);
 		System.out.println("Программа загадал число: " + rand);
@@ -118,4 +118,4 @@ public class Menu {
 		}
 		return num;
 	}
-}
+}	
