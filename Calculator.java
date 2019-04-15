@@ -1,7 +1,7 @@
 package testMenu;
 import java.util.Scanner;
 public class Calculator {
-Scanner scanner = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 	
 	public void startCalculator() {
         boolean continueCalculations=true; 
