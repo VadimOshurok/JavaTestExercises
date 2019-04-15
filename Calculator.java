@@ -1,9 +1,9 @@
+package testMenu;
 import java.util.Scanner;
-
 public class Calculator {
-	static Scanner scanner = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 	
-	public static void main(String[] newNum) {
+	public void startCalculator() {
         boolean continueCalculations=true; 
 		do {
 			double num1 = getInt();
@@ -11,7 +11,7 @@ public class Calculator {
 			char operation = getOperation();
 			double result = calc(num1,num2,operation);
 			System.out.println("Результат операции: "+result); 
-            System.out.println("Хотите продолжить  1.Yes/2.No"); 
+            System.out.println("Хотите продолжить 1.Yes/2.No"); 
             int input = scanner.nextInt();
 			if(input!=1) {
 				continueCalculations=false;
@@ -19,7 +19,7 @@ public class Calculator {
 		}
 		while(continueCalculations);	 
 	}
-	public static double getInt() {
+	public double getInt() {
 		System.out.println("Введите число: ");
 		double num = 0.0;
 		if (scanner.hasNextInt()) {
@@ -27,7 +27,7 @@ public class Calculator {
 		}
 		return num;
 	}
-	public static char getOperation() {
+	public char getOperation() {
 		System.out.println("Введите операцию: ");
 		char operation = 0;
 		if(scanner.hasNext()) {
@@ -35,7 +35,7 @@ public class Calculator {
 		}
 		return operation; 
 	}
-	public static double calc(double num1, double num2, char operation) {
+	public double calc(double num1, double num2, char operation) {
 		double result = 0.0;
 		switch (operation) {
 		case '+':
