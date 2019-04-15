@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class rand {
+public class PlayWithRandom {
 	static Scanner scanner = new Scanner(System.in);
 	
 	public static void main(String[] args) {
