@@ -5,9 +5,8 @@ public class MainMenu {
 	public static void main(String[] args) {
 	Scanner scanner = new Scanner(System.in);
 	boolean CCalculationsMain=true;
-	boolean continueCalculations=true;
 	do {
-		System.out.println("1-калькулятор 2-игра");
+		System.out.println("1-калькулятор 2-игра 3-Сложение в массиве");
 		int nummer = MenuOperation();
 		if (nummer == 1) {
 			 
@@ -18,6 +17,10 @@ public class MainMenu {
 				PlayWithRandom play = new PlayWithRandom();
 				play.startGame();
 		}		
+		if (nummer == 3) { 
+			Massive m1 = new Massive();
+			m1.startMassive();
+	}		
 		System.out.println("Вернуться в меню? 1.Yes/2.No"); 
 		int input = scanner.nextInt();
 		if(input!=1) {
@@ -35,3 +38,6 @@ public class MainMenu {
 		return nummer;
 	}
 }
+
+
+

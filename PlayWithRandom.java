@@ -1,7 +1,7 @@
 package testMenu;
 import java.util.Scanner;
 public class PlayWithRandom { 
-Scanner scanner = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 
 	public void startGame() {
 		boolean continueCalculations=true; 
@@ -50,3 +50,5 @@ Scanner scanner = new Scanner(System.in);
 	}
 
 }
+
+
