@@ -13,11 +13,11 @@ public class Massive {
 			int num3 = getInt();
 			int num4 = getInt(); 
 			massive(num0,num1,num2,num3,num4);
-            System.out.println("Хотите продолжить 1.Yes/2.No"); 
-            int input = scanner.nextInt();
+           	 	System.out.println("Хотите продолжить 1.Yes/2.No"); 
+            		int input = scanner.nextInt();
 			if(input!=1) {
 				continueCalculations=false;
-            }
+            		}
 		}
 		while(continueCalculations);	 
 	
