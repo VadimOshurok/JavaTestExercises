@@ -1,2 +1,3 @@
 # JavaTestExercises
-Calculator v1.2
+Caclulator  
+Play With Random
