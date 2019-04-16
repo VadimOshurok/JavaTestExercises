@@ -7,12 +7,7 @@ public class Massive {
 	public void startMassive() {
 		boolean continueCalculations=true; 
 		do {
-			int num0 = getInt();
-			int num1 = getInt();
-			int num2 = getInt();
-			int num3 = getInt();
-			int num4 = getInt(); 
-			massive(num0,num1,num2,num3,num4);
+			massive();
             System.out.println("Хотите продолжить 1.Yes/2.No"); 
             int input = scanner.nextInt();
 			if(input!=1) {
@@ -32,8 +27,14 @@ public class Massive {
 		return num;
 	}
 	
-	public int[] massive(int num0, int num1, int num2, int num3, int num4) {
-		int[] array = {num0, num1, num2, num3, num4};
+	public int[] massive(){
+		System.out.println("Введите длину массива: ");
+		int size = scanner.nextInt();
+		int array[] = new int[size];
+		System.out.println("Введите элементы массива: ");
+		for (int i=0; i<size; i++) {
+			array[i] = scanner.nextInt();
+		}
 		int sum = IntStream.of(array).sum();
 		System.out.println("Сумма чисел: " + sum);
 		return array;
