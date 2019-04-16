@@ -15,17 +15,7 @@ public class Massive {
             }
 		}
 		while(continueCalculations);	 
-	
 		}	
-	
-	public int getInt() {
-		System.out.println("Введите число: ");
-		int num = 0;
-		if (scanner.hasNextInt()) {
-			num = scanner.nextInt();
-		}
-		return num;
-	}
 	
 	public int[] massive(){
 		System.out.println("Введите длину массива: ");
