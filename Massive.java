@@ -1,12 +1,13 @@
 package testMenu;
 import java.util.Scanner;
-import java.util.stream.IntStream;
+import java.util.ArrayList;
 public class Massive {
 	Scanner scanner = new Scanner(System.in);
 	
 	public void startMassive() {
 		boolean continueCalculations=true; 
 		do {
+
 			massive();
             System.out.println("Хотите продолжить 1.Yes/2.No"); 
             int input = scanner.nextInt();
@@ -17,16 +18,26 @@ public class Massive {
 		while(continueCalculations);	 
 		}	
 	
-	public int[] massive(){
-		System.out.println("Введите длину массива: ");
-		int size = scanner.nextInt();
-		int array[] = new int[size];
-		System.out.println("Введите элементы массива: ");
-		for (int i=0; i<size; i++) {
-			array[i] = scanner.nextInt();
+	public int massive(){
+	
+			ArrayList<Integer> numbers = new ArrayList<Integer>();
+			int total=0;
+			boolean continueCalculations=true; 
+			do {	
+				System.out.println("Введите число: ");
+				double num = 0.0;
+				if (scanner.hasNextInt()) {
+					num = scanner.nextInt();
+				}
+				numbers.add((int) num);
+				total += num;
+				if(num==0) {
+					continueCalculations=false;	
+	            }
+			}
+			while(continueCalculations);	
+			System.out.println(numbers);
+			System.out.println("Сумма чисел составила: "+ total);
+		return total;	
 		}
-		int sum = IntStream.of(array).sum();
-		System.out.println("Сумма чисел: " + sum);
-		return array;
-	}
 }
