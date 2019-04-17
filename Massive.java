@@ -38,5 +38,5 @@ public class Massive {
 		System.out.println(numbers);
 		System.out.println("Сумма чисел составила: "+ total);
 		return total;	
-		}
+	}
 }
