@@ -33,8 +33,8 @@ public class program {
 	
 	public static void text() {
 		for (String retval : text.split(" ")) {
-            String[] words = {retval};
-            for (String word : words) System.out.println(word);
+           		String[] words = {retval};
+            		for (String word : words) System.out.println(word);
 		}
 	}
 	public static void upperWords() {
